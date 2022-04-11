@@ -1,10 +1,11 @@
 #include "shell.h"
 
 /**
- *
+ * main - main function.
+ * Return: Always 0 (Succes).
  */
 
-int main (void)
+int main(void)
 {
 	char *line = NULL, *EXIT = "exit", **array_token, token = ' ';
 	size_t len = 1024;

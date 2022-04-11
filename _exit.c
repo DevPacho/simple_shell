@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _exit - function for exit and free line.
+ * _exit_ - function for exit and free line.
  * @line: char pointer input.
  */
 

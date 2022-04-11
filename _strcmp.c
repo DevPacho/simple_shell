@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _strcmp - concatenates two array a dest with a source
+ * _strcmp_ - concatenates two array a dest with a source
  * @s1: pointer to char array input
  * @s2: pointer to char array input
  * Return: pointer to char dest

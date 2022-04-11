@@ -1,8 +1,10 @@
 #include "shell.h"
 
 /**
- * _strtok - function for to make token the of line input for user.
+ * _strtok_ - function for to make token the of line input for user.
  * @line: char pointer input.
+ * @token: char input.
+ * Return: the array token or NULL if fails.
  */
 
 char **_strtok_(char *line, char token)
@@ -23,8 +25,7 @@ char **_strtok_(char *line, char token)
 	array_token[j] = (char *)malloc(len * sizeof(char));
 	if (!array_token[j])
 	{
-		free(array_token[j]);
-		free(array_token);
+		free(array_token[j]), free(array_token);
 		return (NULL);
 	}
 
@@ -32,9 +33,7 @@ char **_strtok_(char *line, char token)
 	{
 		if (line[i] == token)
 		{
-			array_token[j][k] = '\0';
-			j++;
-			k = 0;
+			array_token[j][k] = '\0', j++, k = 0;
 			array_token[j] = (char *)malloc(len * sizeof(char));
 			if (!array_token[j])
 			{
