@@ -6,8 +6,8 @@
 
 int main (void)
 {
-	char *line = NULL, *EXIT = "exit";
-	size_t len = 1024, i;
+	char *line = NULL, *EXIT = "exit", **array_token, token = ' ';
+	size_t len = 1024;
 
 	line = (char *)malloc(len * sizeof(char));
 	if (line == NULL)
@@ -22,13 +22,13 @@ int main (void)
 		if ((getline(&line, &len, stdin)) == -1)
 			break;
 		if (line)
-			for (i = 0; line[i]; i++)
-			{
-				if (line[i] != EXIT[i])
-					line[i + 1] = '\0';
-				else if (i == 3)
-					_exit_(line);
-			}
+		{
+			array_token = _strtok_(line, token);
+			if (!_strcmp_(array_token[0], EXIT))
+				_exit_(line);
+			else
+				printf("sh : %s: command not found\n", array_token[0]);
+		}
 	}
 	_exit_(line);
 	return (0);
