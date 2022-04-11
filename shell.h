@@ -10,5 +10,7 @@
 #include <sys/stat.h>
 
 void _exit_(char *line);
+char **_strtok_(char *line, char token);
+int _strcmp_(char *s1, char *s2);
 
 #endif
