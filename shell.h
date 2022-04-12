@@ -8,9 +8,12 @@
 #include <sys/wait.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#define bufsize 1024
 
 void _exit_(char *line);
-char **_strtok_(char *line, char token);
+void _freestrs(char **str);
 int _strcmp_(char *s1, char *s2);
+char *_findpath_(char **env);
+char **_strtok_(char *line, char token);
 
 #endif
