@@ -44,8 +44,9 @@ int main(int ac, char **av, char **env)
 			else
 				wait(&status);
 		}
-		_freestrs(array_token), _freestrs(tokenize_path);
+		_freestrs(array_token);
 	}
+	_freestrs(tokenize_path);
 	_exit_(line);
 	return (0);
 }
