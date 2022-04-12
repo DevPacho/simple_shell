@@ -29,20 +29,21 @@ int main(int ac, char **av, char **env)
 			if (!_strcmp_(array_token[0], EXIT))
 				_exit_(line);
 			else
+			{
 				child_pid = fork();
-
-			if (child_pid == -1)
-			{
-				perror("Error:");
-				return (1);
+				if (child_pid == -1)
+				{
+					perror("Error:");
+					return (1);
+				}
+				else if (child_pid == 0)
+				{
+					if (execve(array_token[0], array_token, NULL) == -1)
+						printf("sh : %s: command not found\n", array_token[0]);
+				}
+				else
+					wait(&status);
 			}
-			else if (child_pid == 0)
-			{
-				if (execve(array_token[0], array_token, NULL) == -1)
-					printf("sh : %s: command not found\n", array_token[0]);
-			}
-			else
-				wait(&status);
 		}
 		_freestrs(array_token);
 	}
