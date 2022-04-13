@@ -2,7 +2,7 @@
 
 <img src="https://opensource.com/sites/default/files/lead-images/bash_command_line.png">
 
-<p>Img source: https://opensource.com/article/19/9/getting-started-zsh</p>
+<p><i><b>Img source:</b> https://opensource.com/article/19/9/getting-started-zsh</i></p>
 <h2>Concepts</h2>
 <div>
     <div>
