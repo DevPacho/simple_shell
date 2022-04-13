@@ -2,17 +2,18 @@
 
 /**
  * main - main function.
+ * @ac: number args passed to main
+ * @av: array of args passed to main
+ * @env: array of var env
  * Return: Always 0 (Succes).
  */
 
 int main(int ac, char **av, char **env)
 {
-	(void) ac, (void) av;
 	char *path = _findpath_(env), **tok_path;
 	char *line = NULL, *EXIT = "exit", **array_token;
 	size_t len = 1024;
-	int status;
-	pid_t child_pid;
+	(void) ac, (void) av;
 
 	line = (char *)malloc(len * sizeof(char));
 	if (line == NULL)
@@ -31,18 +32,7 @@ int main(int ac, char **av, char **env)
 				_freestrs(array_token), _freestrs(tok_path), _exit_(line);
 			}
 			else if (!_builtin_(tok_path, array_token[0]))
-			{
-				child_pid = fork();
-				if (child_pid == -1)
-					perror("Error:");
-				else if (child_pid == 0)
-				{
-					if (execve(array_token[0], array_token, NULL) == -1)
-						perror("Error:");
-				}
-				else
-					wait(&status);
-			}
+				_execute(array_token);
 			else
 				printf("sh : %s: command not found\n", array_token[0]);
 			_freestrs(array_token);
