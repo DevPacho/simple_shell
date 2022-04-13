@@ -33,7 +33,7 @@ char **_strtok_(char *line, char token)
 	{
 		if (line[i] == token)
 		{
-			array_token[j][k] = '\0', j++, k = 0;
+			array_token[j][k] = '\0', i++, j++, k = 0;
 			array_token[j] = (char *)malloc(len * sizeof(char));
 			if (!array_token[j])
 			{

@@ -13,7 +13,10 @@
 void _exit_(char *line);
 void _freestrs(char **str);
 int _strcmp_(char *s1, char *s2);
+int _builtin_(char **path, char *cmd);
 char *_findpath_(char **env);
+char *_strcat_(char *dest, char *src);
+char *_strcpy_(char *dest, char *src);
 char **_strtok_(char *line, char token);
 
 #endif
