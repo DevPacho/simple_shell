@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * *_strcat - concatenates two array a dest with a source
+ * *_strcat_ - concatenates two array a dest with a source
  * @dest: pointer to char array input
  * @src: pointer to char array input
  * Return: pointer to char dest

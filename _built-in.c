@@ -1,9 +1,9 @@
 #include "shell.h"
 /**
  * _builtin_ - find the function built-in or no built-in
- * @dest: pointer to char array input
- * @src: pointer to char array input
- * Return: pointer to char dest
+ * @path: double pointer to char array input
+ * @cmd: pointer to char array input
+ * Return: 1 if function is builtin or 0 if fun is no builtin
  */
 int _builtin_(char **path, char *cmd)
 {
