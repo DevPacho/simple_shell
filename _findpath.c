@@ -8,7 +8,7 @@
 
 char *_findpath_(char **env)
 {
-	char *exppath = malloc(bufsize * sizeof(char)), *path = "PATH=";
+	char *exppath = calloc(bufsize, sizeof(char)), *path = "PATH=";
 	int i, j, k = 0, find = 0;
 
 	if (!exppath)

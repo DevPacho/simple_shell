@@ -23,7 +23,7 @@ char **_strtok_(char *line, char token)
 		return (NULL);
 	}
 
-	array_token[j] = malloc(len * sizeof(char));
+	array_token[j] = calloc(len, sizeof(char));
 	if (!array_token[j])
 	{
 		free(array_token[j]), free(array_token);
@@ -35,7 +35,7 @@ char **_strtok_(char *line, char token)
 		if (line[i] == token)
 		{
 			array_token[j][k] = '\0', i++, j++, k = 0;
-			array_token[j] = malloc(len * sizeof(char));
+			array_token[j] = calloc(len, sizeof(char));
 			if (!array_token[j])
 			{
 				for (j--; j >= 0; j--)

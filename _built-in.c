@@ -14,14 +14,15 @@ int _builtin_(char **path, char *cmd)
 	if (!stat(cmd, &st))
 		return (0);
 
-	array_cat = malloc(bufsize * sizeof(char));
+	array_cat = calloc(bufsize, sizeof(char));
 	for (i = 0; path[i]; i++)
 	{
-		array_cat = _strcat_(path[i], &slash);
-		array_cat = _strcat_(array_cat, cmd);
+		_strcpy_(array_cat, path[i]);
+		_strcat_(array_cat, &slash);
+		_strcat_(array_cat, cmd);
 		if (!stat(array_cat, &st))
 		{
-			cmd = _strcpy_(cmd, array_cat);
+			_strcpy_(cmd, array_cat);
 			free(array_cat);
 			return (0);
 		}

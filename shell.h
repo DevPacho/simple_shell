@@ -14,12 +14,12 @@ void _exit_(char *line);
 void _freestrs(char **str);
 void _execute(char **array_token);
 void _echo_(char *str);
+void _strcat_(char *dest, char *src);
+void _strcpy_(char *dest, char *src);
 int _strcmp_(char *s1, char *s2);
 int _strlen_(char *s);
 int _builtin_(char **path, char *cmd);
 char *_findpath_(char **env);
-char *_strcat_(char *dest, char *src);
-char *_strcpy_(char *dest, char *src);
 char **_strtok_(char *line, char token);
 
 #endif
