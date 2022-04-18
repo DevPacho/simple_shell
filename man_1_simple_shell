@@ -1,0 +1,70 @@
+.TH SimpleShell 1 "April 2022" "Linux" "Simple Shell User Manual"
+
+.SH NAME
+.B Simple Shell - a simple UNIX command interpreter.
+
+.SH SYNOPSIS
+.B #include "shell.h" (The name of the library in double quotation marks:"")
+
+.B - Usage:
+
+.B ./shell
+.I [COMMAND]
+.I [ARGUMENT]
+
+.SH DESCRIPTION
+Simulates a basic command interpreter as the default sh in the terminal.
+
+.SH EXAMPLES
+
+This shell can be executed in two different ways:
+
+.I INTERACTIVE
+.B mode example:
+
+.B $ ./shell
+
+.B (devspj@holberton $) /bin/ls
+
+.B shell shell.c shell.h _exit.c
+
+.B (devspj@holberton $) exit
+
+.B $
+
+
+.I NON-INTERACTIVE
+.B mode example:
+
+.B $ echo "/bin/ls" | ./shell
+
+.B shell shell.c shell.h _exit.c
+
+.B $
+
+.SH COMPILATION
+You can compile the shell with gcc and different flags as you can see below:
+
+.B gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o shell
+
+*"shell" will be the name of the executable.
+
+.SH BUILT-INS
+These are commands or functions that are internal to the shell, that is, they do not need external programs to be executed.
+
+These built-ins commands are implemented in the shell:
+
+.B exit -
+exits the shell.
+
+.B env - 
+prints the current environment.
+
+.SH AUTHOR
+Written by Francisco Ramírez and Johan Blandón.
+
+.SH REPORTING BUGS
+Report shell bugs to
+.B 4735@holbertonschool.com
+or
+.B 4543@holbertonschool.com
