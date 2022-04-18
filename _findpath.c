@@ -26,10 +26,10 @@ char *_findpath_(char **env)
 			{
 				exppath = calloc(_strlen_(env[i]) + 1, sizeof(char));
 				if (!exppath)
-        			{
-               				free(exppath);
-                			return (NULL);
-        			}
+				{
+					free(exppath);
+					return (NULL);
+				}
 				find = 1;
 			}
 		}

@@ -11,6 +11,7 @@
 #define bufsize 1024
 
 void _exit_(char *line);
+void _env_(char **env);
 void _freestrs_(char **str);
 void _execute_(char **array_token);
 void _echo_(char *str);
