@@ -38,7 +38,7 @@ int main(int ac, char **av, char **env)
 			else if (!_builtin_(tok_path, array_token[0]))
 				_execute_(array_token);
 			else
-				printf("%s: %d: %s: command not found\n", av[0], i, array_token[0]);
+				_notfound_(av[0], i, array_token[0]);
 			_freestrs_(array_token), _freestrs_(tok_path);
 		}
 		i++;
