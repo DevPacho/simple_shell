@@ -4,13 +4,29 @@
 .B Simple Shell - a simple UNIX command interpreter.
 
 .SH SYNOPSIS
-.B #include "shell.h" (The name of the library in double quotation marks:"")
+.nf
+.B int main(int ac, char **av, char **env)
+.PP
+.BI "#include ''shell.h''"
+.PP
+.BI "void _exit_(char *line);"
+.BI "void _env_(char **env);"
+.BI "void _printnumber_(int n);"
+.BI "void _freestrs_(char **str);"
+.BI "void _execute_(char **array_token);"
+.BI "void _echo_(char *str);"
+.BI "void _strcat_(char *dest, char *src);"
+.BI "void _strcpy_(char *dest, char *src);"
+.BI "void _notfound_(char *av, int i, char *array_token);"
+.BI "int _strcmp_(char *s1, char *s2);"
+.BI "int _strlen_(char *s);"
+.BI "int _builtin_(char **path, char *cmd);"
+.BI "char *_findpath_(char **env);"
+.BI "char **_strtok_(char *line, char token);"
 
-.B - Usage:
+.BI - USAGE:
 
-.B ./shell
-.I [COMMAND]
-.I [ARGUMENT]
+.B ./shell [COMMAND] [ARGUMENT]
 
 .SH DESCRIPTION
 Simulates a basic command interpreter as the default sh in the terminal.
@@ -47,7 +63,14 @@ You can compile the shell with gcc and different flags as you can see below:
 
 .B gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o shell
 
-*"shell" will be the name of the executable.
+.I "shell"
+will be the name of the executable.
+
+In addition, after compiling the program, you can run it with the 
+.I valgrind 
+tool, which helps in debugging memory and performance problems of a program. For this, we will provide you with the command ready with the respective flags that will check the correct operation of the shell:
+
+.B valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --vgdb=no ./shell
 
 .SH BUILT-INS
 These are commands or functions that are internal to the shell, that is, they do not need external programs to be executed.
@@ -61,10 +84,16 @@ exits the shell.
 prints the current environment.
 
 .SH AUTHOR
-Written by Francisco Ramírez and Johan Blandón.
+Written by
+.B Francisco Ramírez
+and
+.B Johan Blandón.
 
 .SH REPORTING BUGS
 Report shell bugs to
 .B 4735@holbertonschool.com
 or
 .B 4543@holbertonschool.com
+
+.SH SEE ALSO
+.B sh(1p)
