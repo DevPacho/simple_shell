@@ -8,14 +8,8 @@
 
 char *_findpath_(char **env)
 {
-	char *exppath = calloc(bufsize, sizeof(char)), *path = "PATH=";
-	int i, j, k = 0, find = 0;
-
-	if (!exppath)
-	{
-		free(exppath);
-		return (NULL);
-	}
+	char *exppath, *path = "PATH=";
+	int i, j, find = 0, k = 0;
 
 	for (i = 0; env[i]; i++)
 	{
@@ -23,13 +17,21 @@ char *_findpath_(char **env)
 		{
 			if (find)
 			{
-				exppath[k] = env[i][j];
+				_strcpy_(&exppath[k], &env[i][j]);
 				k++;
 			}
 			if (env[i][j] != path[j] && !find)
 				break;
 			if (j == 4)
+			{
+				exppath = calloc(_strlen_(env[i]) + 1, sizeof(char));
+				if (!exppath)
+        			{
+               				free(exppath);
+                			return (NULL);
+        			}
 				find = 1;
+			}
 		}
 		find = 0;
 	}
