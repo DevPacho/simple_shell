@@ -12,11 +12,13 @@
 
 void _exit_(char *line);
 void _env_(char **env);
+void _printnumber_(int n);
 void _freestrs_(char **str);
 void _execute_(char **array_token);
 void _echo_(char *str);
 void _strcat_(char *dest, char *src);
 void _strcpy_(char *dest, char *src);
+void _notfound_(char *av, int i, char *array_token);
 int _strcmp_(char *s1, char *s2);
 int _strlen_(char *s);
 int _builtin_(char **path, char *cmd);
