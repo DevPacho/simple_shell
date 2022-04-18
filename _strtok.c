@@ -29,7 +29,6 @@ char **_strtok_(char *line, char token)
 		free(array_token[j]), free(array_token);
 		return (NULL);
 	}
-
 	for (i = 0, k = 0; line[i]; i++, k++)
 	{
 		if (line[i] == token)

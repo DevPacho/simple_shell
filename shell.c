@@ -29,13 +29,13 @@ int main(int ac, char **av, char **env)
 			array_token = _strtok_(line, ' '), tok_path = _strtok_(path, ':');
 			if (!_strcmp_(array_token[0], EXIT))
 			{
-				free(path), _freestrs(array_token), _freestrs(tok_path), _exit_(line);
+				free(path), _freestrs_(array_token), _freestrs_(tok_path), _exit_(line);
 			}
 			else if (!_builtin_(tok_path, array_token[0]))
-				_execute(array_token);
+				_execute_(array_token);
 			else
 				printf("sh : %s: command not found\n", array_token[0]);
-			_freestrs(array_token), _freestrs(tok_path);
+			_freestrs_(array_token), _freestrs_(tok_path);
 		}
 	}
 	return (0);

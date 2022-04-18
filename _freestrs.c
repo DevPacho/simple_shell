@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * _freestrs - function for free any string.
+ * _freestrs_ - function for free any string.
  * @str: string to free.
  */
 
-void _freestrs(char **str)
+void _freestrs_(char **str)
 {
 	int i;
 

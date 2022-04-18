@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * *_execute - function for execute no built-in commands
+ * *_execute_ - function for execute no built-in commands
  * @array_token: double pointer to char array input
  * Return: Nothing
  */
-void _execute(char **array_token)
+void _execute_(char **array_token)
 {
 	int status;
 	pid_t child_pid;
