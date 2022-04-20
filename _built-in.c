@@ -7,7 +7,7 @@
  */
 int _builtin_(char **path, char *cmd)
 {
-	int i;
+	int i = 0;
 	char *array_cat, *slash = "/";
 	struct stat st;
 
