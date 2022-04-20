@@ -104,7 +104,7 @@
 <h3><b><i>Interactive mode</i></b></h3>
 <p>Running the executable file and accessing it directly:</p>
 
-[![Shell-Interactive-mode-example.png](https://i.postimg.cc/bvJNHvp1/Shell-Interactive-mode-example.png)](https://postimg.cc/0zTs9P6N)
+[![Interactive-mode-example-Shell.png](https://i.postimg.cc/bYBkBLg2/Interactive-mode-example-Shell.png)](https://postimg.cc/z3TyLC9J)
 
 <h3><b><i>Non-interactive mode</i></b></h3>
 <p>Without directly accessing the executable file:</p>
