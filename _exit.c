@@ -7,7 +7,6 @@
 
 void _exit_(char *line)
 {
-	printf("exit\n");
 	free(line);
 	exit(EXIT_SUCCESS);
 }
