@@ -10,7 +10,7 @@
 
 int main(int ac, char **av, char **env)
 {
-	int i = 1;
+	int i = 1, interactive = 0;
 	char *path = _findpath_(env), **tok_path;
 	char *line = NULL, *EXIT = "exit", *ENV = "env", **array_token;
 	size_t len = 1024;
@@ -23,9 +23,13 @@ int main(int ac, char **av, char **env)
 	while (1)
 	{
 		if (isatty(STDIN_FILENO) == 1)
-			write(1, "(devsjp@holberton $) ", 22);
+			interactive = 1, write(1, "(devsjp@holberton $) ", 22);
 		if ((getline(&line, &len, stdin)) == -1)
+		{
+			if (interactive)
+				write(1, "\n", 1);
 			free(path), _exit_(line);
+		}
 		if (line)
 		{
 			array_token = _strtok_(line, ' '), tok_path = _strtok_(path, ':');
