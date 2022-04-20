@@ -15,17 +15,14 @@ char **_strtok_(char *line, char token)
 
 	if (!line)
 		return (NULL);
-
 	while (*line == ' ')
 		line++;
-
 	array_token = calloc(len, sizeof(char *));
 	if (!array_token)
 	{
 		free(array_token);
 		return (NULL);
 	}
-
 	array_token[j] = calloc(len, sizeof(char));
 	if (!array_token[j])
 	{
