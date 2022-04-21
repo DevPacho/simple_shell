@@ -34,10 +34,8 @@ int main(int ac, char **av, char **env)
 		{
 			array_token = _strtok_(line, ' '), tok_path = _strtok_(path, ':');
 			if (!_strcmp_(array_token[0], EXIT))
-			{
-				free(path), _freestrs_(array_token), _freestrs_(tok_path), free(line);
-				exit(2);
-			}
+				free(path), _freestrs_(array_token), _freestrs_(tok_path), _exit_(line);
+
 			if (!_strcmp_(array_token[0], ENV))
 				_env_(env);
 
