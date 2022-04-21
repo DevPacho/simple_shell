@@ -95,3 +95,16 @@
 <p>In addition, after compiling the program, you can run it with the <b>valgrind</b> tool, which helps in debugging memory and performance problems of a program. For this, we will provide you with the command ready with the respective flags, these serve a similar function to those provided for the previous compilation, to help verify the correct operation of the program in general, as well as to make it portable for different devices. Take it below:</p>
 <pre><code>valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --vgdb=no<b> ./shell</b></code></pre>
 <br>
+<h2>Execution examples 🔍️</h2>
+<p>This shell can be executed in two different ways:</p>
+<h3><b><i>Interactive mode</i></b></h3>
+<p>Running the executable file and accessing it directly:</p>
+
+<img src="https://i.postimg.cc/3w6CvTR9/Shell-Interactive-mode-example.png">
+
+<h3><b><i>Non-interactive mode</i></b></h3>
+<p>Without directly accessing the executable file:</p>
+
+[![Shell-Non-Interactive-mode-example.png](https://i.postimg.cc/3JcLJSW7/Shell-Non-Interactive-mode-example.png)](https://postimg.cc/KRt705ns)
+
+<br>
