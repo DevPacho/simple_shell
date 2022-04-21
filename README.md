@@ -8,3 +8,6 @@
 
 <p><i><b>Img source:</b> https://opensource.com/article/19/9/getting-started-zsh</i></p>
 <br>
+<h2>Importance of each <i>function</i> 🤝🏻</h2>
+<p>Each of the files you can see plays an important role for the project, because when all of them are finally compressed (compiled) and form an executable file, it will contain the correct shell operation.  Here is a brief description of each one:</p>
+<br>
