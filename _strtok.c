@@ -15,8 +15,7 @@ char **_strtok_(char *line, char token)
 
 	if (!line)
 		return (NULL);
-	while (*line == ' ')
-		line++;
+	_ts_handler_(line);
 	array_token = calloc(len, sizeof(char *));
 	if (!array_token)
 	{

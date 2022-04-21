@@ -14,6 +14,7 @@ void _exit_(char *line);
 void _env_(char **env);
 void _printnumber_(int n);
 void _freestrs_(char **str);
+void _ts_handler_(char *line);
 void _execute_(char **array_token);
 void _echo_(char *str);
 void _strcat_(char *dest, char *src);
