@@ -8,5 +8,5 @@
 void _exit_(char *line)
 {
 	free(line);
-	exit(2);
+	exit(0);
 }
