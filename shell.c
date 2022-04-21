@@ -28,7 +28,7 @@ int main(int ac, char **av, char **env)
 		{
 			if (interactive)
 				write(1, "\n", 1);
-			free(path), _exit_(line);
+			free(path), free(line), exit(2);
 		}
 		if (line)
 		{
