@@ -88,3 +88,10 @@
 [![Simple-Shell-Flowchart.png](https://i.postimg.cc/ydvDmFy7/Simple-Shell-Flowchart.png)](https://postimg.cc/ZBvYZvQQ)
 
 <br>
+<h2>Compilation ⚙️</h2>
+<p>You can compile the program with gcc and different flags that will check for correct operation, which check for errors, warnings and so on. Here is the complete command:</p>
+<pre><code>gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o <b>shell</b></code></pre>
+<p><b>shell</b> will be the name of the file that will be created as executable.</p>
+<p>In addition, after compiling the program, you can run it with the <b>valgrind</b> tool, which helps in debugging memory and performance problems of a program. For this, we will provide you with the command ready with the respective flags, these serve a similar function to those provided for the previous compilation, to help verify the correct operation of the program in general, as well as to make it portable for different devices. Take it below:</p>
+<pre><code>valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --vgdb=no<b> ./shell</b></code></pre>
+<br>
