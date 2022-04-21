@@ -24,10 +24,6 @@
             <td>Find the built-in or non-built-in command</td>
         </tr>
         <tr>
-            <td><a href="https://github.com/FranRM15/simple_shell/blob/main/_echo.c" target="_blank">_echo.c</a></td>
-            <td>Display a line of text</td>
-        </tr>
-        <tr>
             <td><a href="https://github.com/FranRM15/simple_shell/blob/main/_env.c" target="_blank">_env.c</a></td>
             <td>Prints a list of environment variables</td>
         </tr>
