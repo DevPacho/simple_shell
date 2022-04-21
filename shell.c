@@ -30,7 +30,7 @@ int main(int ac, char **av, char **env)
 				write(1, "\n", 1);
 			free(path), _exit_(line);
 		}
-		if (line)
+		if (line[0] != 10)
 		{
 			array_token = _strtok_(line, ' '), tok_path = _strtok_(path, ':');
 			if (!_strcmp_(array_token[0], EXIT))
