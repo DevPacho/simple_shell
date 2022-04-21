@@ -28,14 +28,16 @@ int main(int ac, char **av, char **env)
 		{
 			if (interactive)
 				write(1, "\n", 1);
-			free(path), free(line), exit(2);
+			free(path), _exit_(line);
 		}
 		if (line)
 		{
 			array_token = _strtok_(line, ' '), tok_path = _strtok_(path, ':');
 			if (!_strcmp_(array_token[0], EXIT))
-				free(path), _freestrs_(array_token), _freestrs_(tok_path), _exit_(line);
-
+			{
+				free(path), _freestrs_(array_token), _freestrs_(tok_path), free(line);
+				exit(2);
+			}
 			if (!_strcmp_(array_token[0], ENV))
 				_env_(env);
 
