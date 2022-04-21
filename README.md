@@ -81,3 +81,10 @@
         </tr>
     </tbody>
 </table>
+<br>
+<h2>How the program works? 🤔📊</h2>
+<p>Let us consider a flowchart that will help us to understand the operation of the program in a logical way:</p>
+
+[![Simple-Shell-Flowchart.png](https://i.postimg.cc/ydvDmFy7/Simple-Shell-Flowchart.png)](https://postimg.cc/ZBvYZvQQ)
+
+<br>
