@@ -108,3 +108,13 @@
 [![Shell-Non-Interactive-mode-example.png](https://i.postimg.cc/3JcLJSW7/Shell-Non-Interactive-mode-example.png)](https://postimg.cc/KRt705ns)
 
 <br>
+<h2>Authors 👨‍💻</h2>
+<ul dir="auto">
+    <li>
+        <p dir="auto"><i><b>Francisco Ramírez</b></i> |&nbsp;<a href="https://twitter.com/FranciscoR_15"> Twitter</a> |&nbsp;<a href="https://github.com/FranRM15" rel="nofollow"> GitHub</a></p>
+    </li>
+    <li>
+        <p dir="auto"><i><b>Johan Blandón</b></i> |&nbsp;<a href="https://twitter.com/blandonxx">Twitter</a> |&nbsp;<a href="https://github.com/SebastianBlandon" rel="nofollow">GitHub</a></p>
+    </li>
+</ul>
+<br>
