@@ -111,7 +111,7 @@
 <h2>Authors 👨‍💻</h2>
 <ul dir="auto">
     <li>
-        <p dir="auto"><i><b>Francisco Ramírez</b></i> |&nbsp;<a href="https://twitter.com/FranciscoR_15"> Twitter</a> |&nbsp;<a href="https://github.com/FranRM15" rel="nofollow"> GitHub</a></p>
+        <p dir="auto"><i><b>Francisco Ramírez</b></i> |&nbsp;<a href="https://twitter.com/FranciscoR_15"> Twitter</a> |&nbsp;<a href="https://github.com/DevPacho" rel="nofollow"> GitHub</a></p>
     </li>
     <li>
         <p dir="auto"><i><b>Johan Blandón</b></i> |&nbsp;<a href="https://twitter.com/blandonxx">Twitter</a> |&nbsp;<a href="https://github.com/SebastianBlandon" rel="nofollow">GitHub</a></p>
